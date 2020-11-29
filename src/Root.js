@@ -7,7 +7,7 @@ import MainStyles from './styles/MainStyles'
 
 const PageContainer = styled.div`
   margin: 0 auto;
-  max-width: 55em;
+  max-width: 55rem;
 `
 
 const Root = ({ children }) => (
