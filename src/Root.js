@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 import GlobalStyles from './styles/GlobalStyles'
 import MainStyles from './styles/MainStyles'
@@ -10,16 +10,14 @@ const PageContainer = styled.div`
   max-width: 55em;
 `
 
-const Root = ({ children }) => {
-  return (
-    <>
-      <GlobalStyles />
-      <PageContainer className="page">
-        <MainStyles>{children}</MainStyles>
-      </PageContainer>
-    </>
-  )
-}
+const Root = ({ children }) => (
+  <>
+    <GlobalStyles />
+    <PageContainer className="page">
+      <MainStyles>{children}</MainStyles>
+    </PageContainer>
+  </>
+)
 
 Root.propTypes = {
   children: PropTypes.node.isRequired,
