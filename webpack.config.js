@@ -7,6 +7,10 @@ const PATH_DIST = path.join(__dirname, './dist')
 
 module.exports = (env) => ({
   mode: env.production ? 'production' : 'development',
+  output: {
+    path: PATH_DIST,
+    filename: 'js/[name].[hash].js',
+  },
   devServer: {
     contentBase: PATH_DIST,
     host: 'localhost',
@@ -19,10 +23,6 @@ module.exports = (env) => ({
   },
   devtool: 'inline-source-map',
   entry: [path.join(PATH_SOURCE, './index.js')],
-  output: {
-    path: PATH_DIST,
-    filename: 'js/[name].[hash].js',
-  },
   module: {
     rules: [
       {
